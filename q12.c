@@ -6,21 +6,20 @@
  * from an aircraft carrier catapult
  */
 
-#include <stdio.h>
+#include <stdio.h> /* Includes printf and scanf */
 /* Conversion factor for converting from KPH to M/S */
 #define KPH_TO_MPS_CONVERSION_FACTOR 1000/3600.0
 
 int
 main(void)
 {
-  /* Variables used from program input olding the speed required 
-  * for takeoff (kph) and the distance allowed for takeoff (m) */
-   int takeoff_speed, distance;
-  /* Variables for required acceleration (m/s), time it takes to
-   * takeoff (s), and the speed of the plane at takeoff in m/s */
-   float acceleration, time, takeoff_speed_mps;
+  int takeoff_speed, /* speed required for takeoff (kph) */
+    distance; /* distance allowed for takeoff (m) */
+  float acceleration, /* required acceleration (m/s) */
+    time, /* time it takes to takeoff (s) */
+    takeoff_speed_mps; /* Speed of the plane at takeoff in m/s */
 
-   /* Get takeoff speed and distance */
+  /* Get takeoff speed and distance */
   printf("Enter takeoff speed (kph) and distance (m): ");
   scanf("%d %d", &takeoff_speed, &distance);
 

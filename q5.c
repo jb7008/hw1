@@ -5,20 +5,16 @@
  * bags of I.V. medication
  */
 
-#include <stdio.h>
-
-/* Number of minutes in an hour */
-#define MINS_IN_HOUR 60.0
+#include <stdio.h> /* Includes printf and scanf */
+#define MINS_IN_HOUR 60.0 /* Number of minutes in an hour */
 
 int
 main(void)
 {
-  /* Variables for the volume of I.V. to be infused and the time over which it 
-   * should be infused */
-  int infusion_amt, mins;
-  /* Variables to hold minutes converted to hours and the rate in ml/hr to 
-   * infuse the I.V. */
-  float hours, infusion_rate;
+  int infusion_amt, /* Volume of I.V. to be infused */
+    mins; /* Time in mins over which the I.V. should be infused */
+  float hours, /* Holds minutes converted to hours */
+    infusion_rate; /* Rate in ml/hr to infuse the I.V. */
 
   /* Gets amount of I.V. to be infused */
   printf("Volumne to be infused (ml) => ");
@@ -31,7 +27,7 @@ main(void)
   /* Adds padded line for formatting */
   printf("\n");
 
-  /* converts number of minutes to hours */
+  /* Converts number of minutes to hours */
   hours = mins / MINS_IN_HOUR;
 
   /* Calculates how much I.V. to infuse per hour */

@@ -4,15 +4,13 @@
  * Converts a temperature in Fahrenheit to Kelvin
  */
 
-#include <stdio.h>
+#include <stdio.h> /* Includes printf and scanf */
 
 int
 main(void)
 {
-  /* Variable to hold the input fahrenheit */
-  int fahrenheit;
-  /* Variable to hold the converted Kelvin temperature */
-  double kelvin;
+  int fahrenheit; /* Holds the input fahrenheit temperature */
+  double kelvin; /* Holds the converted Kelvin temperature */
 
   /* Gets temperature in Fahrenheit from user */
   printf("Enter a temperature in degrees Fahrenheit: ");

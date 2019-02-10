@@ -5,39 +5,31 @@
  * the community's population
  */
 
-#include <stdio.h>
-
-/* Liters per flush after new toilet installation */
-#define NEW_LITERS_PER_FLUSH 2
-/* Liters per flush before new toilet installation */
-#define OLD_LITERS_PER_FLUSH 15
-/* Number of toilets per person in the city */
-#define TOILETS_PER_PERSON 1/3.0
-/* Number of flushes per day per toilet */
-#define FLUSHES_PER_DAY 14
-/* Installation cost of a new computer */
-#define INSTALL_COST 150
+#include <stdio.h> /* Includes printf and scanf */
+#define NEW_LITERS_PER_FLUSH 2 /* Liters per flush after new toilet 
+  * installation */
+#define OLD_LITERS_PER_FLUSH 15 /* Liters per flush before new toilet
+  * installation */
+#define TOILETS_PER_PERSON 1/3.0 /* Number of toilets per person in the city */
+#define FLUSHES_PER_DAY 14 /* Number of flushes per day per toilet */
+#define INSTALL_COST 150 /* Installation cost of a new toilet */
 
 int
 main(void)
 {
-  /* Variable to hold the population of the city */
-  int population;
-  /* Variables to hold
-  * old_liters_per_day - number of liters of water used per day before 
-      new toilets were installed
-  * new_liters_per_day - number of liters of water used per day after
-       new toilets were installed
-  * water_savings - how much water will be saved per day
-  * replacement_cost - cost of installing all the new toilets
-  */
-  float old_liters_per_day, new_liters_per_day, water_savings, replacement_cost;
+  int population; /* Holds the population of the city */
+  float old_liters_per_day, /* Number of liters of water used per day before
+    * new toilets were installed */
+    new_liters_per_day, /* Number of liters of water used per day after
+    * new toilets were installed */
+    water_savings, /* How much water will be saved per day */
+    replacement_cost; /* Cost of installing all the new toilets */
 
   /* Gets population */
   printf("Enter population: ");
   scanf("%d", &population);
 
-  /* finds old vs. new liters used per day */
+  /* Finds old vs. new liters used per day */
   old_liters_per_day = population * TOILETS_PER_PERSON * 
     FLUSHES_PER_DAY * OLD_LITERS_PER_FLUSH;
   new_liters_per_day = population * TOILETS_PER_PERSON * 
