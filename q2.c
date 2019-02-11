@@ -4,24 +4,26 @@
  * Program to calculate the work of a dam with 90% efficiency
  */
 
-#include <stdio.h> /* Includes printf and scanf */
-#define g 9.80 /* Gravitational constant */
-#define CUBIC_METER_WATER_MASS 1000 /* Mass of one cubic meter of water in kg */
-#define MW_CONVERSION_FACTOR 0.000001 /* Conversion factor for converting watts
-  * to megawatts */
-#define PERCENT_90_CONVERSION_FACTOR 0.9 /* Conversion factor to convert from 
-  * 100% efficieny to 90% */
+#include <stdio.h>
 
+/* Gravitational constant */
+#define g 9.80
+/* Mass of one cubic meter of water in kg */
+#define CUBIC_METER_WATER_MASS 1000
+/* Conversion factor for converting watts to megawatts */
+#define MW_CONVERSION_FACTOR 0.000001
+/* Conversion factor to convert from 100% efficieny to 90% */
+#define PERCENT_90_CONVERSION_FACTOR 0.9
 
 int
 main(void)
 {
-  int height, /* Height of the dam in meters */
-    flow_rate, /* Flow rate in m^3/s */
-    water_mass; /* Mass of the water flowing through */
-  float work_100p, /* Work done at 100% efficiency */
-    work_90p, /* Work done at 90% efficiency */
-    watt_to_mw; /* Holds calculation fo converting watts to megawatts */
+  /* Variables for height of dam in meters, the flow rate in m^3/s, and the mass
+   * of the water flowing through */
+  int height, flow_rate, water_mass;
+  /* Variables to hold work done at 100% efficiency, 90% efficieny, and to hold 
+   * the calculation of converting watts to megawatts */
+  float work_100p, work_90p, watt_to_mw;
 
   /* Gets height of the dam */
   printf("Enter height of dam: ");

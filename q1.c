@@ -4,16 +4,19 @@
  * Program to calculate reimbursement from driving a certain distance
  */
 
-#include <stdio.h> /* Includes printf and scanf */
-#define REIMBURSEMENT_RATE 0.35 /* Amount reimbursed per mile */
+#include <stdio.h>
+
+/* Amount reimbursed per mile */
+#define REIMBURSEMENT_RATE 0.35
 
 int
 main(void)
 {
-  int odo_start, /* Contains beginning odometer reading */
-    odo_end; /* Contains ending odometer reading */
-  float traveled_miles, /* Total miles traveled */
-  reimbursement; /* Needed reimbursement amount */
+  /* Variables for beginning and ending odometer readings */
+  int odo_start, odo_end;
+  /* Variable for the total miles traveled and the needed reimbursement 
+   * amount */
+  float traveled_miles, reimbursement;
 
   printf("MILEAGE REIMBURSEMENT CALCULATOR\n");
   /* Gets beginning odometer reading */

@@ -4,17 +4,19 @@
  * Estimates temperature in a freezer given the elapsed time
  */
 
-#include <stdio.h> /* Includes printf and scanf */
-#define MINS_IN_HOUR (60.0) /* Number of minutes in an hour */
+#include <stdio.h>
+
+/* Number of minutes in an hour */
+#define MINS_IN_HOUR (60.0)
 
 int
 main(void)
 {
-  int hours, /* Holds number of hours since power failure */
-    mins; /* Holds number of minutes since power failure */
-  float elapsed_time, /* Holds elapsed time since power failure using
-    * fractional hours */
-    temp; /* Temperature in the freezer given elapsed_time */
+  /* Variables to hold the number of hours and minutes since power failure */
+  int hours, mins;
+  /* Variables to hold the elapsed time using factional minutes and the 
+   * temperature in the freezer given elapsed_time */
+  float elapsed_time, temp;
 
   /* Gets hours and minutes since power failure */
   printf("Enter the time since power failure (HH MM): ");

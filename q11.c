@@ -4,28 +4,26 @@
  * Calculates pythagorean triples
  */
 
-#include <stdio.h> /* Includes printf and scanf */
+#include <stdio.h>
 
 int
 main(void)
 {
-  int point1, /* Point 1 recieved from user */
-    point2, /* Point 2 received from user */
-    side1, /* Side 1 of the pythagorean triple */
-    side2, /* Side 2 of the pythagorean triple */
-    hypotenuse; /* Hypotenuse of the pythagorean triple */
+  /* Variables m and n are points received from the user
+  * side1, side2, and hypotenuse are calculated based on the formulas below */
+  int m, n, side1, side2, hypotenuse;
 
   /* Gets two points */
   printf("Enter m and n (m > n): ");
-  scanf("%d %d", &point1, &point2);
+  scanf("%d %d", &m, &n);
 
   /* Calculates the new sides with the formulas: */
   /* side1 = m^2 - n^2 */
-  side1 = (point1 * point1) - (point2 * point2);
+  side1 = (m * m) - (n * n);
   /* side2 = 2nm */
-  side2 = 2 * point1 * point2;
+  side2 = 2 * m * n;
   /* hypotenuse = m^2 + n^2 */
-  hypotenuse = (point1 * point1) + (point2 * point2);
+  hypotenuse = (m * m) + (n * n);
 
   /* Displays results of the pythagorean triple */
   printf("%d %d %d\n", side1, side2, hypotenuse);
